@@ -166,6 +166,47 @@ if k == 'pierwsza klasa':
         cena_biletu = cena_na_osobe + 360 + podstawa
         print('Twój bagaż podręczny przekracza 8kg! Cena biletu wzrosła do',round(cena_biletu,2),'zł')
         
+        import datetime
+    
+t = (s/800 + 0.3)*3600
+
+time = str(datetime.timedelta(seconds=t))
+print("Przewdywany czas lotu",time,'h' )
+
+import requests, json
+  
+
+api_key = "f9f59afb6ef10c4cc9553041ea8d9882"
+base_url = "http://api.openweathermap.org/data/2.5/weather?"
+city_name = input("Sprawdź pogodę w: ")
+complete_url = base_url + "appid=" + api_key + "&q=" + city_name
+response = requests.get(complete_url)
+x = response.json()
+if x["cod"] != "404":
+  
+    
+    y = x["main"]
+  
+    
+    current_temperature = y["temp"]
+  
+   
+    current_pressure = y["pressure"]
+  
+    
+    current_humidiy = y["humidity"]
+ 
+   
+    print(" Temperatura (w stopniach Celcjusza) = " +
+                    str(round(current_temperature-273.15,1)) + 
+          "\n cisnienie (w hPa) = " +
+                    str(current_pressure) +
+          "\n wilgotnosć (w procentach) = " +
+                    str(current_humidiy))
+           
+else:
+     print(" Miasta nie znaleziono ")
+        
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.basemap import Basemap        
