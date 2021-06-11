@@ -59,6 +59,18 @@ fB = np.deg2rad(h_fi2 + m_fi2/60 + s_fi2/3600)
 
 #kartezjańskie dla miejsca przylotu 
 
+N2=a/sqrt((1-e2*(sin(fB))**2));
+
+
+x2 = (N2+H_m2)*cos(fB)*cos(lB);
+
+y2 = (N2+H_m2)*cos(fB)*sin(lB);
+
+z2 = (N2*(1-e2)+H_m2)*sin(fB);
+print("współrzędne kartezjanskie dla miejsca lądowania:")
+print("x:", round(x2,3))
+print("y:", round(y2,3))
+print("z:", round(z2,3))
 
 
 #VINCENT (ODLEGLOSC MIEDZY LOTNISKAMI)
