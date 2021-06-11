@@ -210,13 +210,6 @@ if mapa == 'MS':
     h = 1000.
     m = Basemap(projection='nsper',lon_0=(la+lb)/2,lat_0=(fa+fb)/2,
         satellite_height=h*1000.,resolution='l')
-#m = Basemap(projection='merc',llcrnrlon=-15,llcrnrlat=35,urcrnrlon=69,
-            #urcrnrlat=72, lat_ts=0, resolution='l')
-#m.drawmapboundary(fill_color='#B5DAFE') #oceany
-#m.fillcontinents(color='#77C4A8',lake_color='#B5DAFE')
-#m.drawcountries(color='black',linewidth=1)
-#m.drawstates(linewidth = 0.2)
-#m.drawcoastlines()
     m.bluemarble() #wygląd podobny do satelity ale bez granic państw
     Points = {a:(fa,la),b:(fb,lb)}
     Lon = [Points[key][0] for key in Points]
