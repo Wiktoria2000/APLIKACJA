@@ -114,3 +114,19 @@ ABA=atan(((cos(U1))*(sin(Ls)))/(((-sin(U1)))*(cos(U2))+(cos(U1))*(sin(U2))*(cos(
 if AAB<0:
     AAB=AAB+pi;
     ABA=ABA+pi;
+print('\n DLUGOSC LOTU MIĘDZY LOTNISKAMI:',round(s,3),'m')
+s = round(s,3)/1000
+c = 4.52
+p = 320000
+spalanie = (1800*s)/100
+cena = c*spalanie
+print(round(cena,2),'zł')
+cena_na_osobe = cena/544
+print(round(cena_na_osobe,2),'zł')
+
+#waga bagazu
+
+k = input('Podaj klasę lotu:\n -klasa ekonomiczna\n -pierwsza klasa\n -biznes klasa\n  ')
+
+w_podreczna = int(input('Podaj wagę twojego bagażu podręcznego: '))
+w_dodatkowa = int(input('Podaj wagę twojego bagażu dodatkowego: '))
