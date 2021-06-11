@@ -160,19 +160,22 @@ if k == 'pierwsza klasa':
         cena_biletu = cena_na_osobe + 360 + podstawa
         print('Twój bagaż podręczny przekracza 8kg! Cena biletu wzrosła do',round(cena_biletu,2),'zł')
         
-        import datetime
+       #obliczenie czasu lotu
+    #na podstawie drogi i średniej prędkości
+    import datetime
     
 t = (s/800 + 0.3)*3600
 
-time = str(datetime.timedelta(seconds=t))
+time = str(datetime.timedelta(seconds=t)) #czas w odpowiednim formacie
 print("Przewdywany czas lotu",time,'h' )
 
+#pogoda
 import requests, json
   
-
+#api key
 api_key = "f9f59afb6ef10c4cc9553041ea8d9882"
-base_url = "http://api.openweathermap.org/data/2.5/weather?"
-city_name = input("Sprawdź pogodę w: ")
+base_url = "http://api.openweathermap.org/data/2.5/weather?" #strona z pogoda openweathermap
+city_name = input("Sprawdź pogodę w: ") #miasto dla którego chcemy sprawdzić pogodę
 complete_url = base_url + "appid=" + api_key + "&q=" + city_name
 response = requests.get(complete_url)
 x = response.json()
@@ -181,13 +184,13 @@ if x["cod"] != "404":
     
     y = x["main"]
   
-    
+    #wyznaczenie temperatury
     current_temperature = y["temp"]
   
-   
+    #wyznaczenie ciśnienia
     current_pressure = y["pressure"]
   
-    
+     #wyznaczenie wilgotności
     current_humidiy = y["humidity"]
  
    
@@ -200,6 +203,7 @@ if x["cod"] != "404":
            
 else:
      print(" Miasta nie znaleziono ")
+        
         
 import numpy as np
 import matplotlib.pyplot as plt
