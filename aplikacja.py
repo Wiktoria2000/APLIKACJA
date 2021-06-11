@@ -109,6 +109,7 @@ if AAB<0:
     AAB=AAB+pi;
     ABA=ABA+pi;
 print('\n DLUGOSC LOTU MIĘDZY LOTNISKAMI:',round(s,3),'m')
+#spalanie
 s = round(s,3)/1000
 c = 4.52
 p = 320000
