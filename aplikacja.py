@@ -29,9 +29,9 @@ lA = np.deg2rad(h_l + m_l/60 + s_l/3600)
 fA = np.deg2rad(h_fi + m_fi/60 + s_fi/3600)
 a = 6378137
 e2 = 0.0066943800
+
 #kartezjańskie dla miejsca odlotu
 N=a/sqrt((1-e2*(sin(fA))**2));
-
 
 x = (N+H_m)*cos(fA)*cos(lA);
 
