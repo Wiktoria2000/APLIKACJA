@@ -124,6 +124,8 @@ k = input('Podaj klasę lotu:\n -klasa ekonomiczna\n -pierwsza klasa\n -biznes k
 w_podreczna = int(input('Podaj wagę twojego bagażu podręcznego: '))
 w_dodatkowa = int(input('Podaj wagę twojego bagażu dodatkowego: '))
 
+#Biznes klasa- waga podręczna do 8kg,waga dodatkowa do 32 kg
+
 if k == 'biznes klasa':
     podstawa = 300
     if w_dodatkowa > 32:
@@ -135,7 +137,9 @@ if k == 'biznes klasa':
     if w_podreczna > 8:
         cena_biletu = cena_na_osobe + 360 + podstawa
         print('Twój bagaż podręczny przekracza 8kg! Cena biletu wzrosła do',round(cena_biletu,2),'zł')
-        
+ 
+#Klasa ekonomiczna-waga bagażu podręcznego do 8kg,waga bagażu dodatkowego do 23 kg
+       
 if k == 'klasa ekonomiczna':
     podstawa = 100
     if w_dodatkowa > 23:
@@ -147,7 +151,9 @@ if k == 'klasa ekonomiczna':
     if w_podreczna > 8:
         cena_biletu = cena_na_osobe + 360 + podstawa
         print('Twój bagaż podręczny przekracza 8kg! Cena biletu wzrosła do',round(cena_biletu,2),'zł')
-        
+  
+#Pierwsza klasa- waga bagażu podręcznego do 8 kg, waga bagażu dodatkowego do 32 kg
+      
 if k == 'pierwsza klasa':
     podstawa = 200
     if w_dodatkowa > 32:
