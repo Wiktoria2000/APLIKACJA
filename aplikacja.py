@@ -15,7 +15,7 @@ dane = pd.read_excel('DANEE.xlsx')
 
 dane.index = dane['MIASTO'] #zamiana ineskow 1,2,3 na nazwy miast 
 a = input('Miejsce wylotu linii Lufthansa: ')
-#b = str(input('Miejsce lądowania  '))
+
 
 #przyporządkowanie do konkretnej komórki 
 h_fi = dane.loc[a,'H_(FI)']
