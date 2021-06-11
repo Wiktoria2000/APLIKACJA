@@ -51,20 +51,15 @@ s_l2 = dane.loc[b,'S_(L)']
 H_m2 = dane.loc[b,' H']
 
 lB = np.deg2rad(h_l2 + m_l2/60 + s_l2/3600)
-#lA = np.deg2rad(h_l + m_l/60 + s_l/3600)
-#fA = np.deg2rad(h_fi + m_fi/60 + s_fi/3600)
 fB = np.deg2rad(h_fi2 + m_fi2/60 + s_fi2/3600)
 
 #kartezjańskie dla miejsca przylotu 
 
 N2=a/sqrt((1-e2*(sin(fB))**2));
-
-
 x2 = (N2+H_m2)*cos(fB)*cos(lB);
-
 y2 = (N2+H_m2)*cos(fB)*sin(lB);
-
 z2 = (N2*(1-e2)+H_m2)*sin(fB);
+
 print("współrzędne kartezjanskie dla miejsca lądowania:")
 print("x:", round(x2,3))
 print("y:", round(y2,3))
