@@ -114,3 +114,5 @@ ABA=atan(((cos(U1))*(sin(Ls)))/(((-sin(U1)))*(cos(U2))+(cos(U1))*(sin(U2))*(cos(
 if AAB<0:
     AAB=AAB+pi;
     ABA=ABA+pi;
+    
+print('\n DLUGOSC LOTU MIĘDZY LOTNISKAMI:',round(s,3),'m')
