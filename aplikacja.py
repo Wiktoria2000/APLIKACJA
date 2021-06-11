@@ -168,6 +168,9 @@ if k == 'pierwsza klasa':
         cena_biletu = cena_na_osobe + 360 + podstawa
         print('Twój bagaż podręczny przekracza 8kg! Cena biletu wzrosła do',round(cena_biletu,2),'zł')
         
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.basemap import Basemap        
 
 mapa = input('Wybierz rodzaj mapy: \n MAPA SATELITARNA wpisz MS \n MAPA POLITYCZNA wpisz MP \n')
 
