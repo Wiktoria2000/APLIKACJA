@@ -32,12 +32,10 @@ e2 = 0.0066943800
 
 #kartezjańskie dla miejsca odlotu
 N=a/sqrt((1-e2*(sin(fA))**2));
-
 x = (N+H_m)*cos(fA)*cos(lA);
-
 y = (N+H_m)*cos(fA)*sin(lA);
-
 z = (N*(1-e2)+H_m)*sin(fA);
+
 print("współrzędne kartezjanskie dla miejsca wylotu:")
 print("x:", round(x,3))
 print("y:", round(y,3))
