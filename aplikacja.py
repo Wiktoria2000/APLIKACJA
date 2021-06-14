@@ -176,7 +176,7 @@ time = str(datetime.timedelta(seconds=t)) #czas w odpowiednim formacie
 print("Przewdywany czas lotu",time,'h' )
 
 #pogoda
-import requests, 
+import requests, json
   
 #api key
 api_key = "f9f59afb6ef10c4cc9553041ea8d9882"
