@@ -192,7 +192,6 @@ if x["cod"] != "404":
   
     #wyznaczenie temperatury
     current_temperature = y["temp"]
-  
     #wyznaczenie ciśnienia
     current_pressure = y["pressure"]
   
